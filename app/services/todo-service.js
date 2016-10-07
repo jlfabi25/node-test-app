@@ -7,6 +7,6 @@ exports.Add = function (objects) {
 
 exports.Get = function (objects) {
   return new Promise(function (resolve, reject) {
-    resolve('To Do Added')
+    resolve('Get To Do Object')
   })
 }
