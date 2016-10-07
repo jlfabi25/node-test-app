@@ -4,22 +4,13 @@ const logger = require('./utils/logger')
 
 const express = require('express')
 const defaultRouter = require('./routes/default')
-<<<<<<< HEAD
 
 const path = require('path')
-=======
-const viewRouter = require('./routes/index')
->>>>>>> fe350d0e3f868a864f850500a57d08a195a571ac
 
 const bodyParser = require('body-parser')
 
 module.exports = (config) => {
   const app = express()
-
-<<<<<<< HEAD
-
-=======
->>>>>>> fe350d0e3f868a864f850500a57d08a195a571ac
   // set app config
   app.set('port', config.express.port)
 
