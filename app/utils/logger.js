@@ -1,13 +1,11 @@
 'use strict'
 
-const debug = require('debug')('todo-logger')
-
 const getTime = () => {
   return new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')
 }
 
 exports.logInfo = (req, res) => {
-  debug(`${
+  console.log(`${
     getTime()
     } || Thread= || System=todo-apps || Operation=${
     req.url
@@ -23,7 +21,7 @@ exports.logInfo = (req, res) => {
 }
 
 exports.logError = (err, req) => {
-  debug(`${
+  console.log(`${
     getTime()
     } || Thread= || System=todo-apps ||  Message=${
     err.stack
