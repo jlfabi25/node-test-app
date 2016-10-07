@@ -2,6 +2,8 @@
 
 Test application used as part of my SNHU IT697 class for CD testing. 
 
+[![Build Status](https://travis-ci.org/jlfabi/node-test-app.svg?branch=master)](https://travis-ci.org/jlfabi/node-test-app)
+
 ## Prerequisites
 - Node: 4.4.x (Current LTS - Install from https://nodejs.org/en/) 
 - NPM: 2.15.x (Default installed w/ Node 4.4.x)
