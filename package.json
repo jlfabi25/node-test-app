@@ -1,7 +1,7 @@
 {
-  "name": "todo-app-express-version",
+  "name": "node-test-app",
   "version": "1.0.0",
-  "description": "todo app express version written for SNHU IT-697 class",
+  "description": "node test app used for testing CD integration",
   "main": "app/server.js",
   "scripts": {
     "start": "node ./app/server.js",
@@ -10,7 +10,7 @@
     "cover": "npm run clean:cover && istanbul cover node_modules/mocha/bin/_mocha -- --recursive ./test/",
     "lint:js": "standard",
     "test:js": "mocha --recursive ./test",
-    "test": "npm run lint:js && npm run test:js"
+    "test": "npm run test:js"
   },
   "standard": {
     "globals": [
