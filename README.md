@@ -1,8 +1,6 @@
 # todo-apps
-Test application based on the https://github.com/IBM-Bluemix/todo-apps application. 
 
-As part of my SNHU IT697 class I am attemping to write the application with the same functionality 
-using express and jade.
+Test application used as part of my SNHU IT697 class for CD testing. 
 
 ## Prerequisites
 - Node: 4.4.x (Current LTS - Install from https://nodejs.org/en/) 
