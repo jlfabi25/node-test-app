@@ -22,14 +22,4 @@ router.route('*')
       }).catch(next)
   })
 
-router.route('*')
-  .get((req, res, next) => {
-    var db = req.db
-    var collection = db.get('todos')
-    collection.find({}, {}, function (e, results) {
-      res.locals.standardResponse.data = results
-    })
-    next()
-  })
-
 module.exports = router

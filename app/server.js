@@ -1,5 +1,5 @@
 'use strict'
-
+require('dotenv').config({silent: true})
 const appFactory = require('./app')
 const config = require('./config')
 const app = appFactory(config)
