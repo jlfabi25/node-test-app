@@ -3,6 +3,6 @@ applications:
   memory: 512M
   instances: 1
   domain: mybluemix.net
-  name: node-test-app
-  host: node-test-app
+  name: jlfabi-node-test-app
+  host: jlfabi-node-test-app
   disk_quota: 1024M

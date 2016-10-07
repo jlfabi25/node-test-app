@@ -1,9 +1,9 @@
 'use strict'
 module.exports = Object.freeze({
   express: {
-    port: 3000
+    port: process.env.PORT
   },
   node: {
-    env: 'test'
+    env: process.env.NODE_ENV
   }
 })
