@@ -4,9 +4,6 @@ const logger = require('./utils/logger')
 
 const express = require('express')
 const defaultRouter = require('./routes/default')
-
-const path = require('path')
-
 const bodyParser = require('body-parser')
 
 module.exports = (config) => {
