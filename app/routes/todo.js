@@ -22,4 +22,8 @@ router.route('*')
       }).catch(next)
   })
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fe350d0e3f868a864f850500a57d08a195a571ac
 module.exports = router
