@@ -1,4 +1,4 @@
-# todo-apps
+# node-test-app
 
 Test application used as part of my SNHU IT697 class for CD testing. 
 
