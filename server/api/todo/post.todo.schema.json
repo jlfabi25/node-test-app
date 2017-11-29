@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string"
+        },
+        "status": {
+            "type": "string",
+            "enum": [
+                "open",
+                "inprogress"
+            ]
+        },
+        "startDate": {
+            "type": "string"
+        },
+        "endDate": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "title",
+        "startDate"
+    ]
+}

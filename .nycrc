@@ -1,0 +1,4 @@
+{
+    "reporter": ["lcov", "text-summary", "html"],
+    "report-dir" : "./docs/coverage"
+}

@@ -2,53 +2,59 @@
   "name": "node-test-app",
   "version": "1.0.0",
   "description": "node test app used for testing CD integration",
-  "main": "app/server.js",
   "scripts": {
-    "start": "node ./app/server.js",
-    "watch": "nodemon ./app/server.js",
-    "clean:cover": "rimraf coverage",
-    "cover": "npm run clean:cover && istanbul cover node_modules/mocha/bin/_mocha -- --recursive ./test/",
+    "start": "node ./bin/server",
+    "start:watch": "nodemon ./bin/server",
+    "watch": "nodemon ./bind/server",
+    "clean:cover": "rimraf ./docs/coverage",
+    "cover": "run-s clean:cover cover:js",
+    "cover:js": "nyc mocha --recursive ./test/**/*.test.js",
     "lint:js": "standard",
-    "test:js": "mocha --recursive ./test",
+    "test:js": "mocha --recursive ./test/**/*.test.js",
     "test": "npm run test:js"
   },
   "engines": {
-    "node": "4.x"
-  },
-  "standard": {
-    "globals": [
-      "beforeEach",
-      "afterEach",
-      "describe",
-      "it"
-    ]
+    "node": "8.x.x"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jlfabi/IT-697/tree/master/code"
   },
   "author": "jfabi",
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "chai-as-promised": "^5.3.0",
-    "istanbul": "^0.4.4",
-    "mocha": "^2.5.3",
-    "node-mocks-http": "^1.5.2",
-    "rimraf": "^2.5.4",
-    "should": "^11.1.0",
-    "sinon": "^1.17.4",
-    "standard": "^7.1.2",
-    "supertest": "^1.2.0",
-    "dotenv": "^2.0.0"
-  },
   "dependencies": {
-    "acl": "^0.4.9",
-    "babel-runtime": "^6.11.6",
-    "body-parser": "^1.15.2",
-    "dot-env": "0.0.1",
-    "express": "^4.14.0",
-    "guid": "0.0.12",
-    "node-uuid": "^1.4.7",
-    "request": "^2.74.0"
+    "ajv": "^5.5.0",
+    "body-parser": "^1.18.2",
+    "debug": "^3.1.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "fast-json-stringify": "^0.15.1",
+    "http-errors": "^1.6.2",
+    "morgan": "^1.9.0",
+    "ramda": "^0.25.0",
+    "uuid": "^3.1.0",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "http-server": "^0.10.0",
+    "lint-staged": "^5.0.0",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1",
+    "npm-run-all": "^4.1.2",
+    "nyc": "^11.3.0",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^2.6.2",
+    "sinon": "^4.1.2",
+    "standard": "^10.0.3",
+    "supertest": "^3.0.0"
+  },
+  "standard": {
+    "globals": [
+      "before",
+      "after",
+      "describe",
+      "it"
+    ]
   }
 }
