@@ -1,4 +1,4 @@
-const logger = require('../utilities').logger
+const logger = require('../utilities').errorlogger.logger()
 
 module.exports = (err, req, res, next) => {
   const errorStatus = err.status || 500
