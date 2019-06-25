@@ -4,7 +4,7 @@ const standardFormatter = require('./logger-formatter')
 const createLogger = (options) => {
   options = options || {}
 
-  return new (winston.Logger)({
+  return winston.createLogger({
     transports: getTransports(options)
   })
 }

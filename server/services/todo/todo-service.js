@@ -1,11 +1,11 @@
 const todoModel = require('./todo-model')
-const {ToDoNotFoundError} = require('./errors')
-const _ = require('ramda')
+const { ToDoNotFoundError } = require('./errors')
+const { find, whereEq } = require('ramda')
 
 var todos = []
 
 const get = (id) => {
-  var todo = _.find(_.whereEq({id: id}), todos)
+  var todo = find(whereEq({ id: id }), todos)
   if (!todo) {
     return Promise.reject(new ToDoNotFoundError(id))
   }
@@ -17,4 +17,4 @@ const create = (todo) => {
   todos.push(newTodo)
   return Promise.resolve(newTodo.id)
 }
-module.exports = {get, create}
+module.exports = { get, create }
